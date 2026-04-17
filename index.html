@@ -635,16 +635,98 @@ main {
   background: rgba(255,255,255,0.08);
 }
 
-/* RESPONSIVE */
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+
+/* Tablet */
 @media (max-width: 1000px) {
   .header-right-block { display: none; }
+  .header-inner { padding: 0 28px; }
+  .header-body  { padding: 28px 0 32px; gap: 24px; }
+  .brand-title  { font-size: clamp(2rem, 5vw, 2.8rem); }
+  main          { padding: 40px 28px 60px; }
+  .grid         { grid-template-columns: repeat(2, 1fr); gap: 16px; }
 }
-@media (max-width: 900px) {
-  .header-inner { padding: 0 24px; }
-  .header-body  { padding: 28px 0 32px; gap: 20px; }
-  .shield-wrap  { width: 72px; height: 82px; }
-  main          { padding: 36px 24px 60px; }
-  .grid         { grid-template-columns: 1fr; gap: 14px; }
+
+/* Mobile */
+@media (max-width: 640px) {
+  .header-inner  { padding: 0 16px; }
+  .header-topbar { padding: 10px 0; flex-wrap: wrap; gap: 8px; }
+  .topbar-left   { gap: 6px; flex-wrap: wrap; }
+  .topbar-badge  { font-size: 0.55rem; padding: 3px 7px; letter-spacing: 1px; }
+  .topbar-clock  { display: none; }
+  .topbar-status { font-size: 0.6rem; }
+  .btn-logout    { font-size: 0.6rem; padding: 5px 9px; }
+
+  .header-body {
+    padding: 20px 0 24px;
+    gap: 14px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .shield-wrap { width: 56px; height: 64px; flex-shrink: 0; }
+
+  .brand-eyebrow {
+    font-size: 0.55rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+  }
+  .brand-eyebrow::before { width: 14px; }
+
+  .brand-title {
+    font-size: 1.7rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+
+  .brand-title span {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    margin-bottom: 1px;
+  }
+
+  .brand-subtitle {
+    font-size: 0.6rem;
+    padding: 4px 10px;
+    letter-spacing: 1px;
+  }
+
+  .header-nav { overflow-x: auto; }
+  .nav-chip {
+    padding: 10px 14px;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+
+  main { padding: 24px 16px 48px; }
+
+  .sec-head { margin-bottom: 16px; }
+  .sec-title { font-size: 0.6rem; letter-spacing: 2px; }
+
+  .grid { grid-template-columns: 1fr; gap: 12px; }
+
+  .card { padding: 20px 18px 16px; }
+
+  .card-icon { width: 42px; height: 42px; }
+  .card-icon svg { width: 20px; height: 20px; }
+
+  .card-name { font-size: 1rem; margin-bottom: 7px; }
+  .card-desc { font-size: 0.82rem; margin-bottom: 16px; }
+
+  .card-open {
+    font-size: 0.65rem;
+    padding: 7px 12px;
+  }
+
+  /* login box no mobile */
+  .login-box { padding: 32px 24px; }
+  .login-shield { width: 56px; height: 64px; }
+  .login-title  { font-size: 1.2rem; }
+  .login-sub    { font-size: 0.65rem; margin-bottom: 24px; }
 }
 </style>
 </head>
